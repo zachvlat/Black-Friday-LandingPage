@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+:root {
+  --text: #868686;
+  --highlight: #131419;
+  --box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.15),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+  --box-shadow2: -5px -5px 10px rgba(255, 255, 255, 0.15),
+    5px 5px 10px rgba(0, 0, 0, 0.5);
+  --creds: #ffffff;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: aliceblue;
+  background-color: #131419;
+}
+
+.container__section {
+  /* oso to content megalwnei i poutsa megalwnei */
+  height: 100%;
+  width: 100%;
+  position: sticky; /* panta panw */
+  top: 0;
+  /*padding: 5px 10px; */
+}
+
+.container {
+  height: 100%;
+  color: #131419;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 6rem;
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.message {
+  font-size: 4rem;
+}
+
+#content {
+  display: none;
+  padding: 1rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  li {
+    font-size: 1.125rem;
+    padding: 0.75rem;
+  }
+
+  li span {
+    font-size: 3.375rem;
+  }
+}
+
+.container__input {
+  border-color: transparent;
+  flex: 1;
+  background-color: aliceblue;
+  border-radius: 25px;
+  padding: 20px;
+  width: 300px;
+  height: 20px;
+  color: #333;
+  box-shadow: var(--box-shadow);
+  border: none;
+  outline: none;
+  text-align: left;
+}
+
+button {
+  justify-content: center;
+  align-items: center;
+  background: #131419;
+  width: 300px;
+}
+
+.glow-on-hover {
+  width: 110px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #131419;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(45deg, #ffffff, #f3f3f3, #cccccc, #7c7c7c);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #131419;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.neumorph {
+  width: 300px;
+  height: 50px;
+  background: var(--background);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding: 5px 15px;
+  margin-left: 1rem;
+  margin-top: 20px;
+  color: var(--creds);
+  font-size: 18px;
+  box-shadow: var(--box-shadow2);
+}
+
+.neumorph:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.neumorph:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.glowow {
+  animation: flicker 2.5s infinite alternate;
+  color: #fff;
+  text-shadow: 0 0 0px #fff, 0 0 3px #fff, 0 0 10px #fff, 0 0 22px #0fa,
+    0 0 42px #0fa, 0 0 62px #0fa, 0 0 82px #0fa, 0 0 101px #0fa;
+}
+
+#neontext {
+  animation: flicker 2.5s infinite alternate;
+  color: #fff;
+  text-shadow: 0 0 0px #fff, 0 0 5px #fff, 0 0 21px #fff, 0 0 42px #333,
+    0 0 82px #333, 0 0 82px #333, 0 0 102px #333, 0 0 151px #333;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #333,
+      0 0 80px #333, 0 0 90px #333, 0 0 100px #333, 0 0 150px #333;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
