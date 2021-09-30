@@ -19,10 +19,11 @@
 .container__section {
   /* oso to content megalwnei i poutsa megalwnei */
   height: 100%;
-  width: 100%;
+  width: auto;
   position: sticky; /* panta panw */
   top: 0;
-  /*padding: 5px 10px; */
+  text-align: center;
+  /* padding: 5px 10px; */
 }
 
 .container {
@@ -71,7 +72,7 @@ li span {
 
 @media all and (max-width: 768px) {
   h1 {
-    font-size: 7rem;
+    font-size: 5rem;
   }
   h2 {
     font-size: 3rem;
@@ -84,6 +85,13 @@ li span {
   li span {
     font-size: 3.375rem;
   }
+  .celestino-logo {
+    max-width: 200px;
+    text-align: center;
+  }
+  /* .container__input {
+    max-width: 200px;
+  } */
 }
 
 .container__input {
@@ -92,7 +100,8 @@ li span {
   background-color: aliceblue;
   border-radius: 25px;
   padding: 20px;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 20px;
   color: #333;
   box-shadow: var(--box-shadow);
@@ -204,13 +213,6 @@ button {
     0 0 42px #0fa, 0 0 62px #0fa, 0 0 82px #0fa, 0 0 101px #0fa;
 }
 
-#neontext {
-  animation: flicker 2.5s infinite alternate;
-  color: #fff;
-  text-shadow: 0 0 0px #fff, 0 0 5px #fff, 0 0 21px #fff, 0 0 42px #333,
-    0 0 82px #333, 0 0 82px #333, 0 0 102px #333, 0 0 151px #333;
-}
-
 @keyframes flicker {
   0%,
   18%,
@@ -228,4 +230,35 @@ button {
   55% {
     text-shadow: none;
   }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #131419;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #131419;
+  text-align: center;
+  font-size: 30px;
+}
+
+img {
+  width: 50px;
+  height: 100px;
+}
+
+.info {
+  font-size: 15px;
+}
+
+.celestino-logo {
+  width: 100%;
+  max-width: 300px;
+  height: 100px;
+  text-align: center;
 }
